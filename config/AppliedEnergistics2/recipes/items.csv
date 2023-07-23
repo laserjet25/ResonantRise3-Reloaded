@@ -2512,6 +2512,12 @@ BiomesOPlenty:newBopDirt:2, Sandy Dirt
 BiomesOPlenty:newBopDirt:3, Coarse Sandy Dirt
 BiomesOPlenty:newBopDirt:4, Silty Dirt
 BiomesOPlenty:newBopDirt:5, Coarse Silty Dirt
+BiomesOPlenty:newBopFarmland:0, Loamy Farmland
+BiomesOPlenty:newBopFarmland:1, Loamy Farmland
+BiomesOPlenty:newBopFarmland:2, Sandy Farmland
+BiomesOPlenty:newBopFarmland:3, Loamy Farmland
+BiomesOPlenty:newBopFarmland:4, Loamy Farmland
+BiomesOPlenty:newBopFarmland:5, Loamy Farmland
 BiomesOPlenty:logs1:0, Sacred Oak Wood
 BiomesOPlenty:logs1:1, Cherry Wood
 BiomesOPlenty:logs1:2, Dark Wood
@@ -4812,11 +4818,8 @@ BuildCraft|Builders:builderBlock, Builder Block
 BuildCraft|Builders:architectBlock, Architect Table
 BuildCraft|Builders:libraryBlock, Electronic Library
 BuildCraft|Builders:constructionMarkerBlock, Construction Mark
-BuildCraft|Transport:filteredBufferBlock, Filtered Buffer
-BuildCraft|Transport:pipeBlock, tile.pipeBlock.name
-BuildCraft|Energy:blockOil, Oil
-BuildCraft|Energy:blockFuel, Fuel
-BuildCraft|Energy:blockRedPlasma, tile.blockRedPlasma.name
+BuildCraft|Robotics:zonePlan, Zone Planner
+BuildCraft|Robotics:requester, Requester
 BuildCraft|Silicon:laserBlock, Laser
 BuildCraft|Silicon:laserTableBlock:0, Assembly Table
 BuildCraft|Silicon:laserTableBlock:1, Advanced Crafting Table
@@ -4825,8 +4828,11 @@ BuildCraft|Silicon:laserTableBlock:3, Charging Table
 BuildCraft|Silicon:laserTableBlock:4, Programming Table
 BuildCraft|Silicon:laserTableBlock:5, Stamping Table
 BuildCraft|Silicon:packagerBlock, Recipe Packager
-BuildCraft|Robotics:zonePlan, Zone Planner
-BuildCraft|Robotics:requester, Requester
+BuildCraft|Energy:blockOil, Oil
+BuildCraft|Energy:blockFuel, Fuel
+BuildCraft|Energy:blockRedPlasma, tile.blockRedPlasma.name
+BuildCraft|Transport:filteredBufferBlock, Filtered Buffer
+BuildCraft|Transport:pipeBlock, tile.pipeBlock.name
 BuildCraft|Factory:miningWellBlock, Mining Well
 BuildCraft|Factory:plainPipeBlock, Mining Pipe
 BuildCraft|Factory:autoWorkbenchBlock, Auto Workbench
@@ -7278,7 +7284,7 @@ OpenComputers:relay:0, Relay
 OpenComputers:screen1:0, Screen (Tier 1)
 OpenComputers:screen3:0, Screen (Tier 3)
 OpenComputers:screen2:0, Screen (Tier 2)
-OpenComputers:serverRack:0, Server Rack
+OpenComputers:rack:0, Rack
 OpenComputers:switch:0, §cSwitch§7
 OpenComputers:caseCreative:0, Computer Case (Creative)
 OpenComputers:microcontroller:0, Microcontroller
@@ -7291,6 +7297,7 @@ OpenComputers:waypoint:0, Waypoint
 OpenComputers:endstone:0, End Stone
 OpenComputers:netSplitter:0, Net Splitter
 OpenComputers:transposer:0, Transposer
+OpenComputers:carpetedCapacitor:0, Carpeted Capacitor
 PneumaticCraft:plasticBlock, tile.plasticBlock.name
 PneumaticCraft:etchingAcid, Etching Acid
 PneumaticCraft:lpg, LPG
@@ -7624,9 +7631,11 @@ computronics:computronics.cipher_advanced, Advanced Cipher Block
 computronics:computronics.radar, Radar
 computronics:computronics.colorfulLamp, Colorful Lamp
 computronics:computronics.locomotiveRelay, Digital Locomotive Relay
-computronics:computronics.digitalBox, Digital Signal Receiver Box
+computronics:computronics.digitalReceiverBox, Digital Signal Receiver Box
+computronics:computronics.digitalControllerBox, Digital Signal Controller Box
 computronics:computronics.detector, Detector - Digital
 computronics:computronics.ticketMachine, Ticket Machine
+computronics:computronics.speechBox, Speech Box
 DimensionalAnchors:chunkloader, Dimensional Anchor
 DraconicEvolution:xRayBlock, Distortion Flame
 DraconicEvolution:weatherController, Weather Controller
@@ -7753,7 +7762,7 @@ extracells:vibrantchamberfluid, Fluid Vibration Chamber
 ExtraUtilities:chestMini, Mini-Chest
 ExtraUtilities:chestFull, Slightly Larger Chest
 ExtraUtilities:enderCollector, Ender Collector
-ExtraUtilities:endConstructor:0, QED (Quantum Entanglement Doohicky)
+ExtraUtilities:endConstructor:0, QED (Quasar Entanglement Device)
 ExtraUtilities:endConstructor:2, Ender-Flux Crystal
 ExtraUtilities:endMarker, Ender-Marker
 ExtraUtilities:curtains, Blackout Curtains
@@ -8184,10 +8193,6 @@ harvestcraft:pamgrapefruitSapling, Grapefruit Sapling
 harvestcraft:pamLemon, Lemon
 harvestcraft:pamlemonSapling, Lemon Sapling
 harvestcraft:pamLime, Lime
-harvestcraft:pamlimeSapling, Lime Sapling
-harvestcraft:pamMaple, Maple Wood
-harvestcraft:pammapleSapling, Maple Sapling
-harvestcraft:pamMango, Mango
 minecraft:record_13, Music Disc
 minecraft:record_cat, Music Disc
 minecraft:record_blocks, Music Disc
@@ -8200,6 +8205,10 @@ minecraft:record_strad, Music Disc
 minecraft:record_ward, Music Disc
 minecraft:record_11, Music Disc
 minecraft:record_wait, Music Disc
+harvestcraft:pamlimeSapling, Lime Sapling
+harvestcraft:pamMaple, Maple Wood
+harvestcraft:pammapleSapling, Maple Sapling
+harvestcraft:pamMango, Mango
 harvestcraft:pammangoSapling, Mango Sapling
 harvestcraft:pamNutmeg, Nutmeg
 harvestcraft:pamnutmegSapling, Nutmeg Sapling
@@ -8733,45 +8742,45 @@ ExtraTiC:moltenConstantan, Molten Constantan
 ExtraTiC:blockFunStuff:0, Fairy Block
 ExtraTiC:blockFunStuff:1, Pokefennium Block
 ExtraTiC:blockFunStuff:2, RedAurum Block
-ThaumicTinkerer:spawner, Tablet of Necromancy
-ThaumicTinkerer:gaseousShadow, tile.gaseousShadow.name
-ThaumicTinkerer:wardSlab:0, tile.wardSlab.name
-ThaumicTinkerer:wardSlabFull:0, tile.wardSlab.name
-ThaumicTinkerer:Levitational Locomotive Relay, Levitational Locomotive Relay
+ThaumicTinkerer:darkQuartzSlab:0, Smokey Quartz Slab
+ThaumicTinkerer:darkQuartzSlabFull:0, Smokey Quartz Slab
+ThaumicTinkerer:platform, Ethereal Platform
+ThaumicTinkerer:fireAir, Aer Imbued Fire
+ThaumicTinkerer:bedrockPortal, Bedrock Portal
+ThaumicTinkerer:warpGate, Celestial Gateway
+ThaumicTinkerer:repairer, Thaumic Restorer
+ThaumicTinkerer:animationTablet, Dynamism Tablet
+ThaumicTinkerer:aspectAnalyzer, Aspectalyzer
+ThaumicTinkerer:nitorGas, tile.nitorGas.name
+ThaumicTinkerer:fireEarth, Terra Imbued Fire
+ThaumicTinkerer:infusedGrainBlock, tile.infusedGrainBlock.name
 ThaumicTinkerer:darkQuartz:0, Block of Smokey Quartz
 ThaumicTinkerer:darkQuartz:1, Chiseled Smokey Quartz Block
 ThaumicTinkerer:darkQuartz:2, Pillar Smokey Quartz Block
-ThaumicTinkerer:funnel, Essentia Funnel
-ThaumicTinkerer:platform, Ethereal Platform
-ThaumicTinkerer:travelStairs, Paving Stair of Travel
-ThaumicTinkerer:bedrockPortal, Bedrock Portal
-ThaumicTinkerer:fireWater, Aqua Imbued Fire
-ThaumicTinkerer:gaseousLight, tile.gaseousLight.name
-ThaumicTinkerer:enchanter, Osmotic Enchanter
-ThaumicTinkerer:travelSlab:0, Paving Slab of Travel
-ThaumicTinkerer:travelSlabFull:0, Paving Slab of Travel
-ThaumicTinkerer:Levitational Locomotive, Levitational Locomotive
-ThaumicTinkerer:golemConnector, Golem Connector
-ThaumicTinkerer:fireFire, Ignis Imbued Fire
-ThaumicTinkerer:fireChaos, Perditio Imbued Fire
-ThaumicTinkerer:infusedGrainBlock, tile.infusedGrainBlock.name
-ThaumicTinkerer:animationTablet, Dynamism Tablet
-ThaumicTinkerer:forcefield, Forcefield
 ThaumicTinkerer:interface, Transvector Interface
-ThaumicTinkerer:repairer, Thaumic Restorer
+ThaumicTinkerer:dislocator, Transvector Dislocator
+ThaumicTinkerer:travelStairs, Paving Stair of Travel
+ThaumicTinkerer:darkQuartzStairs, Smokey Quartz Stairs
+ThaumicTinkerer:gaseousLight, tile.gaseousLight.name
+ThaumicTinkerer:wardSlab:0, tile.wardSlab.name
+ThaumicTinkerer:wardSlabFull:0, tile.wardSlab.name
+ThaumicTinkerer:Levitational Locomotive Relay, Levitational Locomotive Relay
+ThaumicTinkerer:enchanter, Osmotic Enchanter
+ThaumicTinkerer:golemConnector, Golem Connector
+ThaumicTinkerer:funnel, Essentia Funnel
+ThaumicTinkerer:fireFire, Ignis Imbued Fire
+ThaumicTinkerer:fireWater, Aqua Imbued Fire
+ThaumicTinkerer:fireChaos, Perditio Imbued Fire
 ThaumicTinkerer:magnet:0, Kinetic Attractor
 ThaumicTinkerer:magnet:1, Corporeal Attractor
-ThaumicTinkerer:nitorGas, tile.nitorGas.name
-ThaumicTinkerer:darkQuartzStairs, Smokey Quartz Stairs
-ThaumicTinkerer:fireOrder, Ordo Imbued Fire
-ThaumicTinkerer:fireEarth, Terra Imbued Fire
-ThaumicTinkerer:fireAir, Aer Imbued Fire
 ThaumicTinkerer:infusedFarmland, tile.infusedFarmland.name
-ThaumicTinkerer:aspectAnalyzer, Aspectalyzer
-ThaumicTinkerer:darkQuartzSlab:0, Smokey Quartz Slab
-ThaumicTinkerer:darkQuartzSlabFull:0, Smokey Quartz Slab
-ThaumicTinkerer:warpGate, Celestial Gateway
-ThaumicTinkerer:dislocator, Transvector Dislocator
+ThaumicTinkerer:travelSlab:0, Paving Slab of Travel
+ThaumicTinkerer:travelSlabFull:0, Paving Slab of Travel
+ThaumicTinkerer:gaseousShadow, tile.gaseousShadow.name
+ThaumicTinkerer:forcefield, Forcefield
+ThaumicTinkerer:spawner, Tablet of Necromancy
+ThaumicTinkerer:fireOrder, Ordo Imbued Fire
+ThaumicTinkerer:Levitational Locomotive, Levitational Locomotive
 ForbiddenMagic:ArcaneCake, Thaumic Cake
 ForbiddenMagic:WrathCage, Wrath Cage
 ForbiddenMagic:InkFlower, Umbral Rose
@@ -9239,16 +9248,34 @@ Growthcraft|Cellar:grc.fruitPresser, Mechanical Press
 Growthcraft|Cellar:grc.brewKettle, Brew Kettle
 Growthcraft|Cellar:grc.fermentBarrel, Fermentation Barrel
 Growthcraft|Cellar:grc.fermentJar, Culture Jar
-Growthcraft|Apples:grc.appleSapling, Apple Sapling
-Growthcraft|Apples:grc.appleLeaves, Apple Leaves
-Growthcraft|Apples:grc.appleBlock, Apple
-Growthcraft|Apples:grc.appleCiderFluid.0, Apple Juice
-Growthcraft|Apples:grc.appleCiderFluid.1, Apple Cider
-Growthcraft|Apples:grc.appleCiderFluid.2, Apple Cider
-Growthcraft|Apples:grc.appleCiderFluid.3, Apple Cider
-Growthcraft|Apples:grc.appleCiderFluid.4, Silken Nectar
-Growthcraft|Apples:grc.appleCiderFluid.5, Apple Cider
-Growthcraft|Apples:grc.appleCiderFluid.6, Apple Cider
+Growthcraft|Milk:grcmilk.ButterChurn, Butter Churn
+Growthcraft|Milk:grcmilk.CheeseBlock, Cheese Block
+Growthcraft|Milk:grcmilk.CheesePress, Cheese Press
+Growthcraft|Milk:grcmilk.CheeseVat, Cheese Vat
+Growthcraft|Milk:grcmilk.HangingCurds:0, Cheddar Curds
+Growthcraft|Milk:grcmilk.HangingCurds:1, Gorgonzola Curds
+Growthcraft|Milk:grcmilk.HangingCurds:2, Swiss Curds
+Growthcraft|Milk:grcmilk.HangingCurds:3, Appenzeller Curds
+Growthcraft|Milk:grcmilk.HangingCurds:4, Asiago Curds
+Growthcraft|Milk:grcmilk.HangingCurds:5, Parmesan Curds
+Growthcraft|Milk:grcmilk.HangingCurds:6, Monterey Curds
+Growthcraft|Milk:grcmilk.HangingCurds:7, Ricotta Curds
+Growthcraft|Milk:grcmilk.Pancheon, Pancheon
+Growthcraft|Milk:grcmilk.Thistle, Thistle
+Growthcraft|Milk:grcmilk.BlockFluidMilk, Milk
+Growthcraft|Milk:grcmilk.BlockFluidButterMilk, Butter Milk
+Growthcraft|Milk:grcmilk.BlockFluidCream, Cream
+Growthcraft|Milk:grcmilk.BlockFluidCurds, Milk Curds
+Growthcraft|Milk:grcmilk.BlockFluidRennet, Rennet
+Growthcraft|Milk:grcmilk.BlockFluidSkimMilk, Skim Milk
+Growthcraft|Milk:grcmilk.BlockFluidWhey, Whey
+Growthcraft|Milk:grcmilk.BlockFluidPasteurizedMilk, Pasteurized Milk
+Growthcraft|Milk:grcmilk.KumisFluid.0, Kumis
+Growthcraft|Milk:grcmilk.KumisFluid.1, Kumis
+Growthcraft|Milk:grcmilk.KumisFluid.2, Kumis
+Growthcraft|Milk:grcmilk.KumisFluid.3, Kumis
+Growthcraft|Milk:grcmilk.KumisFluid.4, Kumis
+Growthcraft|Milk:grcmilk.KumisFluid.5, Vile Milk
 Growthcraft|Bamboo:grc.bambooBlock, Bamboo
 Growthcraft|Bamboo:grc.bambooShoot, Bamboo Shoot
 Growthcraft|Bamboo:grc.bambooStalk, Bamboo
@@ -9261,6 +9288,55 @@ Growthcraft|Bamboo:grc.bambooSingleSlab:0, Bamboo Slab
 Growthcraft|Bamboo:grc.bambooDoor, Bamboo Door
 Growthcraft|Bamboo:grc.bambooFenceGate, Bamboo Fence Gate
 Growthcraft|Bamboo:grc.bambooScaffold, Bamboo Scaffold
+Growthcraft|Apples:grc.appleSapling, Apple Sapling
+Growthcraft|Apples:grc.appleLeaves, Apple Leaves
+Growthcraft|Apples:grc.appleBlock, Apple
+Growthcraft|Apples:grc.appleCiderFluid.0, Apple Juice
+Growthcraft|Apples:grc.appleCiderFluid.1, Apple Cider
+Growthcraft|Apples:grc.appleCiderFluid.2, Apple Cider
+Growthcraft|Apples:grc.appleCiderFluid.3, Apple Cider
+Growthcraft|Apples:grc.appleCiderFluid.4, Silken Nectar
+Growthcraft|Apples:grc.appleCiderFluid.5, Apple Cider
+Growthcraft|Apples:grc.appleCiderFluid.6, Apple Cider
+Growthcraft|Fishtrap:grc.fishTrap, Fish Trap
+Growthcraft|Grapes:grc.grapeVine0, Grape Trunk
+Growthcraft|Grapes:grc.grapeVine1, Grape Trunk
+Growthcraft|Grapes:grc.grapeLeaves, Grape Leaves
+Growthcraft|Grapes:grc.grapeBlock, Grapes
+Growthcraft|Grapes:grc.grapeWineFluid.0, Grape Juice
+Growthcraft|Grapes:grc.grapeWineFluid.1, Grape Wine
+Growthcraft|Grapes:grc.grapeWineFluid.2, Grape Wine
+Growthcraft|Grapes:grc.grapeWineFluid.3, Grape Wine
+Growthcraft|Grapes:grc.grapeWineFluid.4, Ambrosia
+Growthcraft|Grapes:grc.grapeWineFluid.5, Port Wine
+Growthcraft|Grapes:grc.grapeWineFluid.6, Grape Wine
+Growthcraft|Grapes:grc.grapeWineFluid.7, Grape Wine
+Growthcraft|Hops:grc.hopVine, Hops
+Growthcraft|Hops:grc.hopAleFluid.0, Ale
+Growthcraft|Hops:grc.hopAleFluid.1, Ale
+Growthcraft|Hops:grc.hopAleFluid.2, Ale
+Growthcraft|Hops:grc.hopAleFluid.3, Ale Wort
+Growthcraft|Hops:grc.hopAleFluid.4, Ale
+Growthcraft|Hops:grc.hopAleFluid.5, Ale
+Growthcraft|Hops:grc.hopAleFluid.6, Ale
+Growthcraft|Hops:grc.hopAleFluid.7, Ale
+Growthcraft|Hops:grc.hopAleFluid.8, Ale
+Growthcraft|Hops:grc.lagerFluid.0, Lager
+Growthcraft|Hops:grc.lagerFluid.1, Lager
+Growthcraft|Hops:grc.lagerFluid.2, Lager
+Growthcraft|Hops:grc.lagerFluid.3, Lager
+Growthcraft|Hops:grc.lagerFluid.4, Lager
+Growthcraft|Hops:grc.lagerFluid.5, Lager
+Growthcraft|Hops:grc.lagerFluid.6, Lager
+Growthcraft|Rice:grc.riceBlock, Rice
+Growthcraft|Rice:grc.paddyField, Rice Paddy
+Growthcraft|Rice:grc.riceSakeFluid.0, Sake Moromi
+Growthcraft|Rice:grc.riceSakeFluid.1, Sake
+Growthcraft|Rice:grc.riceSakeFluid.2, Sake
+Growthcraft|Rice:grc.riceSakeFluid.3, Sake
+Growthcraft|Rice:grc.riceSakeFluid.4, Divine Sake
+Growthcraft|Rice:grc.riceSakeFluid.5, Sake
+Growthcraft|Rice:grc.riceSakeFluid.6, Sake
 Growthcraft|Bees:grc.BeeBox.Forestry.0.Normal:0, Larch Bee Box
 Growthcraft|Bees:grc.BeeBox.Forestry.0.Normal:1, Teak Bee Box
 Growthcraft|Bees:grc.BeeBox.Forestry.0.Normal:2, Acacia Bee Box
@@ -9368,73 +9444,6 @@ Growthcraft|Bees:grc.BeeBox.Botania:1, Dreamwood Bee Box
 Growthcraft|Bees:grc.BeeBox.Botania:2, Shimmerwood Bee Box
 Growthcraft|Bees:grc.BeeBox.Thaumcraft:0, Greatwood Bee Box
 Growthcraft|Bees:grc.BeeBox.Thaumcraft:1, Silverwood Bee Box
-Growthcraft|Fishtrap:grc.fishTrap, Fish Trap
-Growthcraft|Grapes:grc.grapeVine0, Grape Trunk
-Growthcraft|Grapes:grc.grapeVine1, Grape Trunk
-Growthcraft|Grapes:grc.grapeLeaves, Grape Leaves
-Growthcraft|Grapes:grc.grapeBlock, Grapes
-Growthcraft|Grapes:grc.grapeWineFluid.0, Grape Juice
-Growthcraft|Grapes:grc.grapeWineFluid.1, Grape Wine
-Growthcraft|Grapes:grc.grapeWineFluid.2, Grape Wine
-Growthcraft|Grapes:grc.grapeWineFluid.3, Grape Wine
-Growthcraft|Grapes:grc.grapeWineFluid.4, Ambrosia
-Growthcraft|Grapes:grc.grapeWineFluid.5, Port Wine
-Growthcraft|Grapes:grc.grapeWineFluid.6, Grape Wine
-Growthcraft|Grapes:grc.grapeWineFluid.7, Grape Wine
-Growthcraft|Hops:grc.hopVine, Hops
-Growthcraft|Hops:grc.hopAleFluid.0, Ale
-Growthcraft|Hops:grc.hopAleFluid.1, Ale
-Growthcraft|Hops:grc.hopAleFluid.2, Ale
-Growthcraft|Hops:grc.hopAleFluid.3, Ale Wort
-Growthcraft|Hops:grc.hopAleFluid.4, Ale
-Growthcraft|Hops:grc.hopAleFluid.5, Ale
-Growthcraft|Hops:grc.hopAleFluid.6, Ale
-Growthcraft|Hops:grc.hopAleFluid.7, Ale
-Growthcraft|Hops:grc.hopAleFluid.8, Ale
-Growthcraft|Hops:grc.lagerFluid.0, Lager
-Growthcraft|Hops:grc.lagerFluid.1, Lager
-Growthcraft|Hops:grc.lagerFluid.2, Lager
-Growthcraft|Hops:grc.lagerFluid.3, Lager
-Growthcraft|Hops:grc.lagerFluid.4, Lager
-Growthcraft|Hops:grc.lagerFluid.5, Lager
-Growthcraft|Hops:grc.lagerFluid.6, Lager
-Growthcraft|Milk:grcmilk.ButterChurn, Butter Churn
-Growthcraft|Milk:grcmilk.CheeseBlock, Cheese Block
-Growthcraft|Milk:grcmilk.CheesePress, Cheese Press
-Growthcraft|Milk:grcmilk.CheeseVat, Cheese Vat
-Growthcraft|Milk:grcmilk.HangingCurds:0, Cheddar Curds
-Growthcraft|Milk:grcmilk.HangingCurds:1, Gorgonzola Curds
-Growthcraft|Milk:grcmilk.HangingCurds:2, Swiss Curds
-Growthcraft|Milk:grcmilk.HangingCurds:3, Appenzeller Curds
-Growthcraft|Milk:grcmilk.HangingCurds:4, Asiago Curds
-Growthcraft|Milk:grcmilk.HangingCurds:5, Parmesan Curds
-Growthcraft|Milk:grcmilk.HangingCurds:6, Monterey Curds
-Growthcraft|Milk:grcmilk.HangingCurds:7, Ricotta Curds
-Growthcraft|Milk:grcmilk.Pancheon, Pancheon
-Growthcraft|Milk:grcmilk.Thistle, Thistle
-Growthcraft|Milk:grcmilk.BlockFluidMilk, Milk
-Growthcraft|Milk:grcmilk.BlockFluidButterMilk, Butter Milk
-Growthcraft|Milk:grcmilk.BlockFluidCream, Cream
-Growthcraft|Milk:grcmilk.BlockFluidCurds, Milk Curds
-Growthcraft|Milk:grcmilk.BlockFluidRennet, Rennet
-Growthcraft|Milk:grcmilk.BlockFluidSkimMilk, Skim Milk
-Growthcraft|Milk:grcmilk.BlockFluidWhey, Whey
-Growthcraft|Milk:grcmilk.BlockFluidPasteurizedMilk, Pasteurized Milk
-Growthcraft|Milk:grcmilk.KumisFluid.0, Kumis
-Growthcraft|Milk:grcmilk.KumisFluid.1, Kumis
-Growthcraft|Milk:grcmilk.KumisFluid.2, Kumis
-Growthcraft|Milk:grcmilk.KumisFluid.3, Kumis
-Growthcraft|Milk:grcmilk.KumisFluid.4, Kumis
-Growthcraft|Milk:grcmilk.KumisFluid.5, Vile Milk
-Growthcraft|Rice:grc.riceBlock, Rice
-Growthcraft|Rice:grc.paddyField, Rice Paddy
-Growthcraft|Rice:grc.riceSakeFluid.0, Sake Moromi
-Growthcraft|Rice:grc.riceSakeFluid.1, Sake
-Growthcraft|Rice:grc.riceSakeFluid.2, Sake
-Growthcraft|Rice:grc.riceSakeFluid.3, Sake
-Growthcraft|Rice:grc.riceSakeFluid.4, Divine Sake
-Growthcraft|Rice:grc.riceSakeFluid.5, Sake
-Growthcraft|Rice:grc.riceSakeFluid.6, Sake
 headcrumbs:betterSkull, tile.headcrumbs.betterSkull.name
 headcrumbs:player, tile.headcrumbs.player.name
 headcrumbs:empty, tile.headcrumbs.empty.name
@@ -9620,11 +9629,11 @@ OpenBlocks:sky:1, Sky Block
 OpenBlocks:xpshower, XP Shower
 OpenBlocks:goldenegg, Golden Egg
 OpenBlocks:scaffolding, Scaffolding
+OpenPeripheral:peripheralproxy, Peripheral Proxy
 OpenPeripheral:glassesbridge, Terminal Glasses Bridge
 OpenPeripheral:pim, PIM
 OpenPeripheral:sensor, Sensor
 OpenPeripheral:selector, Item Selector
-OpenPeripheral:peripheralproxy, Peripheral Proxy
 OpenPeripheral:ticketmachine, Ticket Machine
 fodc:oreConvTable, Ore Conversion Table
 fodc:oreAutoconverter, Automatic Ore Converter
@@ -9891,6 +9900,97 @@ thaumicenergistics:thaumicenergistics.block.arcane.assembler, Arcane Assembler
 thaumicenergistics:thaumicenergistics.block.knowledge.inscriber, Knowledge Inscriber
 thaumicenergistics:thaumicenergistics.block.essentia.vibration.chamber, Essentia Vibration Chamber
 thaumicenergistics:thaumicenergistics.block.distillation.encoder, Distillation Pattern Encoder
+ThaumicExploration:autoSorter, tile.thaumicexploration:autoSorter.name
+ThaumicExploration:trashJar, Oblivion Jar
+ThaumicExploration:boundChest, tile.boundChest.name
+ThaumicExploration:floatCandle:0, White Floating Candle
+ThaumicExploration:floatCandle:1, Orange Floating Candle
+ThaumicExploration:floatCandle:2, Magenta Floating Candle
+ThaumicExploration:floatCandle:3, Light Blue Floating Candle
+ThaumicExploration:floatCandle:4, Yellow Floating Candle
+ThaumicExploration:floatCandle:5, Lime Floating Candle
+ThaumicExploration:floatCandle:6, Pink Floating Candle
+ThaumicExploration:floatCandle:7, Gray Floating Candle
+ThaumicExploration:floatCandle:8, Light Gray Floating Candle
+ThaumicExploration:floatCandle:9, Cyan Floating Candle
+ThaumicExploration:floatCandle:10, Purple Floating Candle
+ThaumicExploration:floatCandle:11, Blue Floating Candle
+ThaumicExploration:floatCandle:12, Brown Floating Candle
+ThaumicExploration:floatCandle:13, Green Floating Candle
+ThaumicExploration:floatCandle:14, Red Floating Candle
+ThaumicExploration:floatCandle:15, Black Floating Candle
+ThaumicExploration:meltyIce, Ice
+ThaumicExploration:boundJar, Bound Jar
+ThaumicExploration:thinkTankJar, Think Tank
+ThaumicExploration:everfullUrn, Everfull Urn
+ThaumicExploration:everburnUrn, Everburn Urn
+ThaumicExploration:soulBrazier, Soul Brazier
+ThaumicExploration:crucibleSouls, Crucible of Souls
+ThaumicExploration:replicator, Thaumic Replicator
+ThaumicHorizons:synthNode, Ethereal Shard
+ThaumicHorizons:alchemite, Alchemite
+ThaumicHorizons:visDynamo, Vis Dynamo
+ThaumicHorizons:essentiaDynamo, Essentia Dynamo
+ThaumicHorizons:nodeMonitor, Node Monitor
+ThaumicHorizons:soulSieve, Soul Sieve
+ThaumicHorizons:inspiratron, Inspiratron
+ThaumicHorizons:soulforge, Soulforge
+ThaumicHorizons:soulJar:0, Jarred  Soul
+ThaumicHorizons:bloodInfuser, Seroconverter
+ThaumicHorizons:vat, Curative Vat
+ThaumicHorizons:vatSolid, Curative Vat
+ThaumicHorizons:vatInterior, tile.ThaumicHorizons_vatInterior.name
+ThaumicHorizons:soulBeacon, Soul Beacon
+ThaumicHorizons:modMatrix, Modified Runic Matrix
+ThaumicHorizons:chocolate, Block of Chocolate
+ThaumicHorizons:evanescent, tile.ThaumicHorizons_evanescent.name
+ThaumicHorizons:light, Light Orb
+ThaumicHorizons:lightSolar, Light Orb
+ThaumicHorizons:transductionAmplifier, Transduction Amplifier
+ThaumicHorizons:recombinator, Teleological Recombinator
+ThaumicHorizons:vortexStabilizer, Vortex Attenuator
+ThaumicHorizons:vortexTH:0, Planar Vortex
+ThaumicHorizons:vortexTH:1, Planar Vortex (Creative)
+ThaumicHorizons:voidTH, Planar Boundary
+ThaumicHorizons:cloudTH:0, Cloud
+ThaumicHorizons:cloudTH:2, Thundercloud
+ThaumicHorizons:cloudTH:3, Acid Cloud
+ThaumicHorizons:cloudTH:5, Tumorous Cloud
+ThaumicHorizons:cloudTH:8, Spore Cloud
+ThaumicHorizons:cloudGlowingTH:1, Plasma Cloud
+ThaumicHorizons:cloudGlowingTH:4, Alloy Cloud
+ThaumicHorizons:cloudGlowingTH:6, Vis Cloud
+ThaumicHorizons:cloudGlowingTH:7, Glyph Cloud
+ThaumicHorizons:cloudGlowingTH:9, Animus Cloud
+ThaumicHorizons:brainTH, Lump of Brain
+ThaumicHorizons:dustTH, Dust
+ThaumicHorizons:eyeTH, Eye Cluster
+ThaumicHorizons:boneTH, Bone
+ThaumicHorizons:fleshTH, Lump of Flesh
+ThaumicHorizons:spikeTH, Metal Spike
+ThaumicHorizons:spikeWoodTH, Wooden Spike
+ThaumicHorizons:spikeToothTH, Tooth
+ThaumicHorizons:crystalTH:0, White Crystal
+ThaumicHorizons:crystalTH:1, Orange Crystal
+ThaumicHorizons:crystalTH:2, Magenta Crystal
+ThaumicHorizons:crystalTH:3, Light Blue Crystal
+ThaumicHorizons:crystalTH:4, Yellow Crystal
+ThaumicHorizons:crystalTH:5, Lime Crystal
+ThaumicHorizons:crystalTH:6, Pink Crystal
+ThaumicHorizons:crystalTH:7, Gray Crystal
+ThaumicHorizons:crystalTH:8, Light Gray Crystal
+ThaumicHorizons:crystalTH:9, Cyan Crystal
+ThaumicHorizons:crystalTH:10, Purple Crystal
+ThaumicHorizons:crystalTH:11, Blue Crystal
+ThaumicHorizons:crystalTH:12, Brown Crystal
+ThaumicHorizons:crystalTH:13, Green Crystal
+ThaumicHorizons:crystalTH:14, Red Crystal
+ThaumicHorizons:crystalTH:15, Black Crystal
+ThaumicHorizons:crystalDeep, Deep Crystal
+ThaumicHorizons:leviathanTH, Primordial Fossil
+ThaumicHorizons:slotTH, Keystone Receptacle
+ThaumicHorizons:portalTH, Unnamed Block, report to mod author.
+ThaumicHorizons:gatewayTH, Planar Gateway
 ThermalDynamics:ThermalDynamics_0:0, Leadstone Fluxduct
 ThermalDynamics:ThermalDynamics_0:1, Hardened Fluxduct
 ThermalDynamics:ThermalDynamics_0:2, Redstone Energy Fluxduct
@@ -12999,11 +13099,11 @@ appliedenergistics2:item.ItemFacade:0, Cable Facade - Chiseled Brownstone
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Fairy Block
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Pokefennium Block
 appliedenergistics2:item.ItemFacade:0, Cable Facade - RedAurum Block
+appliedenergistics2:item.ItemFacade:0, Cable Facade - Smokey Quartz Slab
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Block of Smokey Quartz
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Chiseled Smokey Quartz Block
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Pillar Smokey Quartz Block
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Paving Slab of Travel
-appliedenergistics2:item.ItemFacade:0, Cable Facade - Smokey Quartz Slab
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Nether Star Block
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Tainted Log
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Tainted Planks
@@ -13174,6 +13274,16 @@ appliedenergistics2:item.ItemFacade:0, Cable Facade - Destination Analyzer
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Matter Booster
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Inventory Cable
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Reinforced Metal Block
+appliedenergistics2:item.ItemFacade:0, Cable Facade - Alchemite
+appliedenergistics2:item.ItemFacade:0, Cable Facade - Block of Chocolate
+appliedenergistics2:item.ItemFacade:0, Cable Facade - Planar Boundary
+appliedenergistics2:item.ItemFacade:0, Cable Facade - Lump of Brain
+appliedenergistics2:item.ItemFacade:0, Cable Facade - Dust
+appliedenergistics2:item.ItemFacade:0, Cable Facade - Eye Cluster
+appliedenergistics2:item.ItemFacade:0, Cable Facade - Bone
+appliedenergistics2:item.ItemFacade:0, Cable Facade - Lump of Flesh
+appliedenergistics2:item.ItemFacade:0, Cable Facade - Primordial Fossil
+appliedenergistics2:item.ItemFacade:0, Cable Facade - Planar Gateway
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Rowan Wood
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Alder Wood
 appliedenergistics2:item.ItemFacade:0, Cable Facade - Hawthorn Wood
@@ -14269,7 +14379,7 @@ BiomesOPlenty:hoeAmethyst, Amethyst Hoe
 BiomesOPlenty:scytheWood, Wooden Scythe
 BiomesOPlenty:scytheStone, Stone Scythe
 BiomesOPlenty:scytheIron, Iron Scythe
-BiomesOPlenty:scytheGold, Gold Scythe
+BiomesOPlenty:scytheGold, Golden Scythe
 BiomesOPlenty:scytheDiamond, Diamond Scythe
 BiomesOPlenty:scytheMud, Mud Scythe
 BiomesOPlenty:scytheAmethyst, Amethyst Scythe
@@ -14439,7 +14549,6 @@ HardcoreEnderExpansion:charm:25, Charm of Digestive Recover
 HardcoreEnderExpansion:charm:26, Charm of Digestive Recover
 HardcoreEnderExpansion:charm:27, Charm of Digestive Recover
 HardcoreEnderExpansion:charm:28, Charm of Life Steal
-HardcoreEnderExpansion:charm:29, Charm of Life Steal
 HardcoreEnderExpansion:charm:30, Charm of Life Steal
 HardcoreEnderExpansion:charm:31, Charm of Damage Redirection
 HardcoreEnderExpansion:charm:32, Charm of Damage Redirection
@@ -14454,7 +14563,6 @@ HardcoreEnderExpansion:charm:40, Charm of Magic Penetration
 HardcoreEnderExpansion:charm:41, Charm of Magic Penetration
 HardcoreEnderExpansion:charm:42, Charm of Magic Penetration
 HardcoreEnderExpansion:charm:43, Charm of Magic Penetration
-HardcoreEnderExpansion:charm:44, Charm of Witchery Harm
 HardcoreEnderExpansion:charm:45, Charm of Witchery Harm
 HardcoreEnderExpansion:charm:46, Charm of Witchery Harm
 HardcoreEnderExpansion:charm:65, Charm of Witchery Harm
@@ -15736,6 +15844,21 @@ Botania:speedUpBelt, item.speedUpBelt.name
 Botania:baubleBox, item.baubleBox.name
 BuildCraft|Builders:templateItem, Template
 BuildCraft|Builders:blueprintItem, Blueprint
+BuildCraft|Robotics:robot, Robot
+BuildCraft|Robotics:robotStation, item.robotStation.name
+BuildCraft|Robotics:redstone_board, Redstone Board
+BuildCraft|Silicon:redstoneChipset:0, Redstone Chipset
+BuildCraft|Silicon:redstoneChipset:1, Iron Chipset
+BuildCraft|Silicon:redstoneChipset:2, Golden Chipset
+BuildCraft|Silicon:redstoneChipset:3, Diamond Chipset
+BuildCraft|Silicon:redstoneChipset:4, Pulsating Chipset
+BuildCraft|Silicon:redstoneChipset:5, Quartz Chipset
+BuildCraft|Silicon:redstoneChipset:6, Redstone Comp Chipset
+BuildCraft|Silicon:redstoneChipset:7, Emerald Chipset
+BuildCraft|Silicon:package, Package
+BuildCraft|Silicon:redstoneCrystal, Redstone Crystal
+BuildCraft|Energy:bucketOil, Oil Bucket
+BuildCraft|Energy:bucketFuel, Fuel Bucket
 BuildCraft|Transport:pipeWaterproof, Pipe Sealant
 BuildCraft|Transport:item.buildcraftPipe.pipeitemswood:0, Wooden Transport Pipe
 BuildCraft|Transport:item.buildcraftPipe.pipeitemsemerald:0, Emerald Transport Pipe
@@ -15816,21 +15939,6 @@ BuildCraft|Transport:pipeLens:32, Lens (Clear)
 BuildCraft|Transport:pipeLens:33, Filter (Clear)
 BuildCraft|Transport:pipePowerAdapter, item.pipePowerAdapter.name
 BuildCraft|Transport:gateCopier, Gate Copier
-BuildCraft|Energy:bucketOil, Oil Bucket
-BuildCraft|Energy:bucketFuel, Fuel Bucket
-BuildCraft|Silicon:redstoneChipset:0, Redstone Chipset
-BuildCraft|Silicon:redstoneChipset:1, Iron Chipset
-BuildCraft|Silicon:redstoneChipset:2, Golden Chipset
-BuildCraft|Silicon:redstoneChipset:3, Diamond Chipset
-BuildCraft|Silicon:redstoneChipset:4, Pulsating Chipset
-BuildCraft|Silicon:redstoneChipset:5, Quartz Chipset
-BuildCraft|Silicon:redstoneChipset:6, Redstone Comp Chipset
-BuildCraft|Silicon:redstoneChipset:7, Emerald Chipset
-BuildCraft|Silicon:package, Package
-BuildCraft|Silicon:redstoneCrystal, Redstone Crystal
-BuildCraft|Robotics:robot, Robot
-BuildCraft|Robotics:robotStation, item.robotStation.name
-BuildCraft|Robotics:redstone_board, Redstone Board
 BuildCraft|Compat:item.buildcraftPipe.pipeitemspropolis:0, Apiarist's Pipe
 eureka:engineeringDiary, Engineering Diary
 bcadditions:ironCanister, Iron Canister
@@ -16147,8 +16255,8 @@ ComputerCraft:pocketComputer:0, Wireless Pocket Computer
 ComputerCraft:pocketComputer:1, Advanced Pocket Computer
 ComputerCraft:pocketComputer:1, Advanced Wireless Pocket Computer
 OpenComputers:item:27, Arithmetic Logic Unit (ALU)
-OpenComputers:item:101, Accelerated Processing Unit (APU) (Tier 1)
-OpenComputers:item:102, Accelerated Processing Unit (APU) (Tier 2)
+OpenComputers:item:101, Accelerated Processing Unit (APU) (Tier 2)
+OpenComputers:item:102, Accelerated Processing Unit (APU) (Tier 3)
 OpenComputers:item:103, Accelerated Processing Unit (APU) (Creative)
 OpenComputers:item:18, Grog
 OpenComputers:item:0, Analyzer
@@ -16163,6 +16271,7 @@ OpenComputers:item:31, Circuit Board
 OpenComputers:item:70, Component Bus (Tier 1)
 OpenComputers:item:71, Component Bus (Tier 2)
 OpenComputers:item:72, Component Bus (Tier 3)
+OpenComputers:item:114, Component Bus (Creative)
 OpenComputers:item:28, Control Unit (CU)
 OpenComputers:item:17, Cutting Wire
 OpenComputers:item:104, Data Card (Tier 1)
@@ -16170,7 +16279,9 @@ OpenComputers:item:105, Data Card (Tier 2)
 OpenComputers:item:106, Data Card (Tier 3)
 OpenComputers:item:73, Debug Card
 OpenComputers:item:81, Network Debugger
+OpenComputers:item:111, Diamond Chip
 OpenComputers:item:19, Disk Platter
+OpenComputers:item:109, Disk Drive
 OpenComputers:item:83, Drone Case (Tier 1)
 OpenComputers:item:87, Drone Case (Tier 2)
 OpenComputers:item:91, Drone Case (Creative)
@@ -16213,6 +16324,7 @@ OpenComputers:item:74, Tablet Case (Tier 1)
 OpenComputers:item:92, Tablet Case (Tier 2)
 OpenComputers:item:93, Tablet Case (Creative)
 OpenComputers:item:41, Remote Terminal
+OpenComputers:item:108, Terminal Server
 OpenComputers:item:97, Texture Picker
 OpenComputers:item:23, Transistor
 OpenComputers:item:49, Angel Upgrade
@@ -16237,6 +16349,7 @@ OpenComputers:item:100, Hover Upgrade (Tier 2)
 OpenComputers:item:53, Inventory Upgrade
 OpenComputers:item:61, Inventory Controller Upgrade
 OpenComputers:item:85, Leash Upgrade
+OpenComputers:item:112, MFU
 OpenComputers:item:36, Navigation Upgrade
 OpenComputers:item:75, Piston Upgrade
 OpenComputers:item:35, Sign I/O Upgrade
@@ -16244,7 +16357,9 @@ OpenComputers:item:34, Solar Generator Upgrade
 OpenComputers:item:76, Tank Upgrade
 OpenComputers:item:77, Tank Controller Upgrade
 OpenComputers:item:67, Tractor Beam Upgrade
-OpenComputers:item:13, Wireless Network Card
+OpenComputers:item:110, Trading Upgrade
+OpenComputers:item:113, Wireless Network Card (Tier 1)
+OpenComputers:item:13, Wireless Network Card (Tier 2)
 OpenComputers:item:84, Crecopter
 OpenComputers:item:0, Microcontroller
 OpenComputers:item:0, Creatix
@@ -16637,6 +16752,7 @@ computronics:computronics.tape:5, Cassette Tape
 computronics:computronics.tape:6, Cassette Tape
 computronics:computronics.tape:8, Cassette Tape
 computronics:computronics.parts:0, Tape Track
+computronics:computronics.portableTapeDrive, Portable Tape Drive
 computronics:computronics.relaySensor, Digital Relay Sensor
 computronics:computronics.ocParts:0, Camera Upgrade
 computronics:computronics.ocParts:1, Chat Upgrade
@@ -16646,6 +16762,14 @@ computronics:computronics.ocParts:4, Spoofing Card
 computronics:computronics.ocParts:5, Beep Card
 computronics:computronics.ocParts:6, Self-Destructing Card
 computronics:computronics.ocParts:7, Colorful Upgrade
+computronics:computronics.ocParts:8, Noise Card
+computronics:computronics.ocParts:9, Sound Card
+computronics:computronics.ocParts:10, Light Board
+computronics:computronics.ocParts:11, Server Self-Destructor
+computronics:computronics.ocParts:12, Rack Capacitor
+computronics:computronics.ocParts:13, Switch Board
+computronics:computronics.ocParts:14, Speech Upgrade
+computronics:computronics.ocSpecialParts:0, Magical Memory (Creative)
 computronics:computronics.partsForestry:0, Caustic Comb
 computronics:computronics.partsForestry:1, Caustic Drop
 computronics:computronics.droneStation, Drone Docking Station
@@ -19984,6 +20108,8 @@ MagicBees:beeNugget:1, Copper Nugget
 MagicBees:beeNugget:2, Tin Nugget
 MagicBees:beeNugget:3, Silver Nugget
 MagicBees:beeNugget:4, Lead Nugget
+MagicBees:beeNugget:5, Diamond Shard
+MagicBees:beeNugget:6, Emerald Shard
 MagicBees:magnet:0, Mysterious Magnet
 MagicBees:magnet:2, Mysterious Magnet
 MagicBees:magnet:4, Mysterious Magnet
@@ -20116,6 +20242,64 @@ Growthcraft|Cellar:grc.waterBag:14, Water Bag (Red)
 Growthcraft|Cellar:grc.waterBag:15, Water Bag (Black)
 Growthcraft|Cellar:grc.waterBag:16, Water Bag
 Growthcraft|Cellar:grc.chievItemDummy:0, item.grc.chievItemDummy.name
+Growthcraft|Milk:grcmilk.Butter:0, Butter (Unsalted)
+Growthcraft|Milk:grcmilk.Butter:1, Butter (Salted)
+Growthcraft|Milk:grcmilk.Cheese:0, Cheddar Cheese
+Growthcraft|Milk:grcmilk.Cheese:1, Gorgonzola Cheese
+Growthcraft|Milk:grcmilk.Cheese:2, Swiss Cheese
+Growthcraft|Milk:grcmilk.Cheese:3, Appenzeller Cheese
+Growthcraft|Milk:grcmilk.Cheese:4, Asiago Cheese
+Growthcraft|Milk:grcmilk.Cheese:5, Parmesan Cheese
+Growthcraft|Milk:grcmilk.Cheese:6, Monterey Cheese
+Growthcraft|Milk:grcmilk.Cheese:7, Ricotta Cheese
+Growthcraft|Milk:grcmilk.CheeseCloth, Cheese Cloth
+Growthcraft|Milk:grcmilk.IceCream:0, Ice Cream (Plain)
+Growthcraft|Milk:grcmilk.IceCream:1, Ice Cream (Chocolate)
+Growthcraft|Milk:grcmilk.IceCream:2, Ice Cream (Grape)
+Growthcraft|Milk:grcmilk.IceCream:3, Ice Cream (Apple)
+Growthcraft|Milk:grcmilk.IceCream:4, Ice Cream (Honey)
+Growthcraft|Milk:grcmilk.IceCream:5, Ice Cream (Watermelon)
+Growthcraft|Milk:grcmilk.Yogurt:0, Yogurt (Plain)
+Growthcraft|Milk:grcmilk.Yogurt:1, Yogurt (Chocolate)
+Growthcraft|Milk:grcmilk.Yogurt:2, Yogurt (Grape)
+Growthcraft|Milk:grcmilk.Yogurt:3, Yogurt (Apple)
+Growthcraft|Milk:grcmilk.Yogurt:4, Yogurt (Honey)
+Growthcraft|Milk:grcmilk.Yogurt:5, Yogurt (Watermelon)
+Growthcraft|Milk:grcmilk.Stomach, Stomach
+Growthcraft|Milk:grcmilk.StarterCulture, Starter Culture
+Growthcraft|Milk:grcmilk.SeedThistle, Thistle Seeds
+Growthcraft|Milk:grcmilk.KumisBottle:0, Kumis
+Growthcraft|Milk:grcmilk.KumisBottle:1, Kumis
+Growthcraft|Milk:grcmilk.KumisBottle:2, Kumis
+Growthcraft|Milk:grcmilk.KumisBottle:3, Kumis
+Growthcraft|Milk:grcmilk.KumisBottle:4, Kumis
+Growthcraft|Milk:grcmilk.KumisBottle:5, Vile Milk
+Growthcraft|Milk:grcmilk.BottleFluidMilk, Milk Bottle
+Growthcraft|Milk:grcmilk.BottleFluidButterMilk, Butter Milk Bottle
+Growthcraft|Milk:grcmilk.BucketFluidButterMilk, item.grcmilk.BucketFluidButterMilk.name
+Growthcraft|Milk:grcmilk.BottleFluidCream, Cream Bottle
+Growthcraft|Milk:grcmilk.BucketFluidCream, item.grcmilk.BucketFluidCream.name
+Growthcraft|Milk:grcmilk.BottleFluidCurds, Milk Curds Bottle
+Growthcraft|Milk:grcmilk.BucketFluidCurds, item.grcmilk.BucketFluidCurds.name
+Growthcraft|Milk:grcmilk.BottleFluidRennet, Rennet Bottle
+Growthcraft|Milk:grcmilk.BucketFluidRennet, item.grcmilk.BucketFluidRennet.name
+Growthcraft|Milk:grcmilk.BottleFluidSkimMilk, Skim Milk Bottle
+Growthcraft|Milk:grcmilk.BucketFluidSkimMilk, item.grcmilk.BucketFluidSkimMilk.name
+Growthcraft|Milk:grcmilk.BottleFluidWhey, Whey Bottle
+Growthcraft|Milk:grcmilk.BucketFluidWhey, item.grcmilk.BucketFluidWhey.name
+Growthcraft|Milk:grcmilk.BottleFluidPasteurizedMilk, Pasteurized Milk Bottle
+Growthcraft|Milk:grcmilk.BucketFluidPasteurizedMilk, item.grcmilk.BucketFluidPasteurizedMilk.name
+Growthcraft|Milk:grcmilk.KumisBucket.0, Bucket
+Growthcraft|Milk:grcmilk.KumisBucket.1, Bucket
+Growthcraft|Milk:grcmilk.KumisBucket.2, Bucket
+Growthcraft|Milk:grcmilk.KumisBucket.3, Bucket
+Growthcraft|Milk:grcmilk.KumisBucket.4, Bucket
+Growthcraft|Milk:grcmilk.KumisBucket.5, Bucket
+Growthcraft|Bamboo:grc.bamboo, Bamboo
+Growthcraft|Bamboo:grc.bambooDoorItem, Bamboo Door
+Growthcraft|Bamboo:grc.bambooRaft, Bamboo Raft
+Growthcraft|Bamboo:grc.bambooCoal, Bamboo Charcoal
+Growthcraft|Bamboo:grc.bambooShootFood, Bamboo Shoot
 Growthcraft|Apples:grc.appleSeeds, Apple Core
 Growthcraft|Apples:grc.appleCider:0, Apple Juice
 Growthcraft|Apples:grc.appleCider:1, Apple Cider
@@ -20131,34 +20315,6 @@ Growthcraft|Apples:grc.appleCiderBucket.3, Bucket
 Growthcraft|Apples:grc.appleCiderBucket.4, Bucket
 Growthcraft|Apples:grc.appleCiderBucket.5, Bucket
 Growthcraft|Apples:grc.appleCiderBucket.6, Bucket
-Growthcraft|Bamboo:grc.bamboo, Bamboo
-Growthcraft|Bamboo:grc.bambooDoorItem, Bamboo Door
-Growthcraft|Bamboo:grc.bambooRaft, Bamboo Raft
-Growthcraft|Bamboo:grc.bambooCoal, Bamboo Charcoal
-Growthcraft|Bamboo:grc.bambooShootFood, Bamboo Shoot
-Growthcraft|Bees:grc.honeyCombEmpty, Empty Honeycomb
-Growthcraft|Bees:grc.honeyCombFilled, Honeycomb
-Growthcraft|Bees:grc.honeyJar, Honey
-Growthcraft|Bees:grc.bee, Bee
-Growthcraft|Bees:grcbees.BeesWax:0, Beeswax
-Growthcraft|Bees:grcbees.BeesWax:1, Red Beeswax
-Growthcraft|Bees:grcbees.BeesWax:2, Black Beeswax
-Growthcraft|Bees:grc.honeyMead:0, Mead Must
-Growthcraft|Bees:grc.honeyMead:1, Mead
-Growthcraft|Bees:grc.honeyMead:2, Mead
-Growthcraft|Bees:grc.honeyMead:3, Mead
-Growthcraft|Bees:grc.honeyMead:4, Mead
-Growthcraft|Bees:grc.honeyMead:5, Mead
-Growthcraft|Bees:grc.honeyMead:6, Mead
-Growthcraft|Bees:grc.honeyMeadBucket.0, Bucket
-Growthcraft|Bees:grc.honeyMeadBucket.1, Bucket
-Growthcraft|Bees:grc.honeyMeadBucket.2, Bucket
-Growthcraft|Bees:grc.honeyMeadBucket.3, Bucket
-Growthcraft|Bees:grc.honeyMeadBucket.4, Bucket
-Growthcraft|Bees:grc.honeyMeadBucket.5, Bucket
-Growthcraft|Bees:grc.honeyMeadBucket.6, Bucket
-Growthcraft|Bees:grc.BottleFluidHoney, Honey Bottle
-Growthcraft|Bees:grc.BucketFluidHoney, Honey Bucket
 Growthcraft|Grapes:grc.grapes:0, Grapes
 Growthcraft|Grapes:grc.grapes:1, White Grapes
 Growthcraft|Grapes:grc.grapes:2, Red Grapes
@@ -20213,59 +20369,6 @@ Growthcraft|Hops:grc.lagerBucket.3, Bucket
 Growthcraft|Hops:grc.lagerBucket.4, Bucket
 Growthcraft|Hops:grc.lagerBucket.5, Bucket
 Growthcraft|Hops:grc.lagerBucket.6, Bucket
-Growthcraft|Milk:grcmilk.Butter:0, Butter (Unsalted)
-Growthcraft|Milk:grcmilk.Butter:1, Butter (Salted)
-Growthcraft|Milk:grcmilk.Cheese:0, Cheddar Cheese
-Growthcraft|Milk:grcmilk.Cheese:1, Gorgonzola Cheese
-Growthcraft|Milk:grcmilk.Cheese:2, Swiss Cheese
-Growthcraft|Milk:grcmilk.Cheese:3, Appenzeller Cheese
-Growthcraft|Milk:grcmilk.Cheese:4, Asiago Cheese
-Growthcraft|Milk:grcmilk.Cheese:5, Parmesan Cheese
-Growthcraft|Milk:grcmilk.Cheese:6, Monterey Cheese
-Growthcraft|Milk:grcmilk.Cheese:7, Ricotta Cheese
-Growthcraft|Milk:grcmilk.CheeseCloth, Cheese Cloth
-Growthcraft|Milk:grcmilk.IceCream:0, Ice Cream (Plain)
-Growthcraft|Milk:grcmilk.IceCream:1, Ice Cream (Chocolate)
-Growthcraft|Milk:grcmilk.IceCream:2, Ice Cream (Grape)
-Growthcraft|Milk:grcmilk.IceCream:3, Ice Cream (Apple)
-Growthcraft|Milk:grcmilk.IceCream:4, Ice Cream (Honey)
-Growthcraft|Milk:grcmilk.IceCream:5, Ice Cream (Watermelon)
-Growthcraft|Milk:grcmilk.Yogurt:0, Yogurt (Plain)
-Growthcraft|Milk:grcmilk.Yogurt:1, Yogurt (Chocolate)
-Growthcraft|Milk:grcmilk.Yogurt:2, Yogurt (Grape)
-Growthcraft|Milk:grcmilk.Yogurt:3, Yogurt (Apple)
-Growthcraft|Milk:grcmilk.Yogurt:4, Yogurt (Honey)
-Growthcraft|Milk:grcmilk.Yogurt:5, Yogurt (Watermelon)
-Growthcraft|Milk:grcmilk.Stomach, Stomach
-Growthcraft|Milk:grcmilk.StarterCulture, Starter Culture
-Growthcraft|Milk:grcmilk.SeedThistle, Thistle Seeds
-Growthcraft|Milk:grcmilk.KumisBottle:0, Kumis
-Growthcraft|Milk:grcmilk.KumisBottle:1, Kumis
-Growthcraft|Milk:grcmilk.KumisBottle:2, Kumis
-Growthcraft|Milk:grcmilk.KumisBottle:3, Kumis
-Growthcraft|Milk:grcmilk.KumisBottle:4, Kumis
-Growthcraft|Milk:grcmilk.KumisBottle:5, Vile Milk
-Growthcraft|Milk:grcmilk.BottleFluidMilk, Milk Bottle
-Growthcraft|Milk:grcmilk.BottleFluidButterMilk, Butter Milk Bottle
-Growthcraft|Milk:grcmilk.BucketFluidButterMilk, item.grcmilk.BucketFluidButterMilk.name
-Growthcraft|Milk:grcmilk.BottleFluidCream, Cream Bottle
-Growthcraft|Milk:grcmilk.BucketFluidCream, item.grcmilk.BucketFluidCream.name
-Growthcraft|Milk:grcmilk.BottleFluidCurds, Milk Curds Bottle
-Growthcraft|Milk:grcmilk.BucketFluidCurds, item.grcmilk.BucketFluidCurds.name
-Growthcraft|Milk:grcmilk.BottleFluidRennet, Rennet Bottle
-Growthcraft|Milk:grcmilk.BucketFluidRennet, item.grcmilk.BucketFluidRennet.name
-Growthcraft|Milk:grcmilk.BottleFluidSkimMilk, Skim Milk Bottle
-Growthcraft|Milk:grcmilk.BucketFluidSkimMilk, item.grcmilk.BucketFluidSkimMilk.name
-Growthcraft|Milk:grcmilk.BottleFluidWhey, Whey Bottle
-Growthcraft|Milk:grcmilk.BucketFluidWhey, item.grcmilk.BucketFluidWhey.name
-Growthcraft|Milk:grcmilk.BottleFluidPasteurizedMilk, Pasteurized Milk Bottle
-Growthcraft|Milk:grcmilk.BucketFluidPasteurizedMilk, item.grcmilk.BucketFluidPasteurizedMilk.name
-Growthcraft|Milk:grcmilk.KumisBucket.0, Bucket
-Growthcraft|Milk:grcmilk.KumisBucket.1, Bucket
-Growthcraft|Milk:grcmilk.KumisBucket.2, Bucket
-Growthcraft|Milk:grcmilk.KumisBucket.3, Bucket
-Growthcraft|Milk:grcmilk.KumisBucket.4, Bucket
-Growthcraft|Milk:grcmilk.KumisBucket.5, Bucket
 Growthcraft|Rice:grc.rice, Rice Grain
 Growthcraft|Rice:grc.riceBall, Onigiri
 Growthcraft|Rice:grc.riceSake:0, Sake Moromi
@@ -20282,6 +20385,29 @@ Growthcraft|Rice:grc.riceSakeBucket.3, Bucket
 Growthcraft|Rice:grc.riceSakeBucket.4, Bucket
 Growthcraft|Rice:grc.riceSakeBucket.5, Bucket
 Growthcraft|Rice:grc.riceSakeBucket.6, Bucket
+Growthcraft|Bees:grc.honeyCombEmpty, Empty Honeycomb
+Growthcraft|Bees:grc.honeyCombFilled, Honeycomb
+Growthcraft|Bees:grc.honeyJar, Honey
+Growthcraft|Bees:grc.bee, Bee
+Growthcraft|Bees:grcbees.BeesWax:0, Beeswax
+Growthcraft|Bees:grcbees.BeesWax:1, Red Beeswax
+Growthcraft|Bees:grcbees.BeesWax:2, Black Beeswax
+Growthcraft|Bees:grc.honeyMead:0, Mead Must
+Growthcraft|Bees:grc.honeyMead:1, Mead
+Growthcraft|Bees:grc.honeyMead:2, Mead
+Growthcraft|Bees:grc.honeyMead:3, Mead
+Growthcraft|Bees:grc.honeyMead:4, Mead
+Growthcraft|Bees:grc.honeyMead:5, Mead
+Growthcraft|Bees:grc.honeyMead:6, Mead
+Growthcraft|Bees:grc.honeyMeadBucket.0, Bucket
+Growthcraft|Bees:grc.honeyMeadBucket.1, Bucket
+Growthcraft|Bees:grc.honeyMeadBucket.2, Bucket
+Growthcraft|Bees:grc.honeyMeadBucket.3, Bucket
+Growthcraft|Bees:grc.honeyMeadBucket.4, Bucket
+Growthcraft|Bees:grc.honeyMeadBucket.5, Bucket
+Growthcraft|Bees:grc.honeyMeadBucket.6, Bucket
+Growthcraft|Bees:grc.BottleFluidHoney, Honey Bottle
+Growthcraft|Bees:grc.BucketFluidHoney, Honey Bucket
 guideapi:ItemLostPage:0, Lost Page
 headcrumbs:head:1, Blaze Head
 headcrumbs:head:2, Enderman Head
@@ -20414,13 +20540,13 @@ IronChest:diamondCrystalUpgrade, Diamond to Crystal Chest Upgrade
 IronChest:woodIronUpgrade, Wood to Iron Chest Upgrade
 IronChest:woodCopperUpgrade, Wood to Copper Chest Upgrade
 IronChest:diamondObsidianUpgrade, Diamond to Obsidian Chest Upgrade
+ironchestminecarts:minecart_chest_diamond, Minecart with Diamond Chest
+ironchestminecarts:minecart_chest_obsidian, Minecart with Obsidian Chest
+ironchestminecarts:minecart_chest_gold, Minecart with Gold Chest
+ironchestminecarts:minecart_chest_iron, Minecart with Iron Chest
 ironchestminecarts:minecart_chest_copper, Minecart with Copper Chest
 ironchestminecarts:minecart_chest_dirtchest9000, Minecart with DirtChest9000
 ironchestminecarts:minecart_chest_crystal, Minecart with Crystal Chest
-ironchestminecarts:minecart_chest_gold, Minecart with Gold Chest
-ironchestminecarts:minecart_chest_obsidian, Minecart with Obsidian Chest
-ironchestminecarts:minecart_chest_diamond, Minecart with Diamond Chest
-ironchestminecarts:minecart_chest_iron, Minecart with Iron Chest
 ironchestminecarts:minecart_chest_silver, Minecart with Silver Chest
 JABBA:upgradeStructural:0, item.upgrade.structural.1.name
 JABBA:upgradeStructural:1, item.upgrade.structural.2.name
@@ -21259,6 +21385,9 @@ SolarFlux:upgradeTransferRate, Transfer rate upgrade
 SolarFlux:upgradeCapacity, Capacity upgrade
 SolarFlux:upgradeFurnace, Furnace upgrade
 SolarFlux:upgradeBlank, Blank upgrade
+SpiceOfLife:bookfoodjournal, Food Journal
+SpiceOfLife:lunchbox, Lunch Box
+SpiceOfLife:lunchbag, Lunch Bag
 StevesAddons:duplicator, Manager Duplicator
 StevesAddons:labeler, Factory Labeler
 StevesCarts:ModularCart:0, Modular cart
@@ -21361,6 +21490,178 @@ thaumicenergistics:wireless.essentia.terminal, Wireless Essentia Terminal
 thaumicenergistics:knowledge.core, Knowledge Core
 thaumicenergistics:focus.aewrench, Wand Focus: AE Wrench
 thaumicenergistics:golem.wifi.backpack, Wireless Golem Backpack
+ThaumicExploration:transmutationCore, Transmutative Rod
+ThaumicExploration:transmutationStaffCore, Transmutative Staff Core
+ThaumicExploration:talismanFood, Talisman of Nourishment
+ThaumicExploration:amberCore, Amber Rod
+ThaumicExploration:amberStaffCore, Amber Staff Core
+ThaumicExploration:necroStaffCore, Necromancer's Staff Core
+ThaumicExploration:sojournerCap, Sojourner's Cap
+ThaumicExploration:sojournerCapUncharged, Inert Sojourner's Cap
+ThaumicExploration:mechanistCap, Mechanist's Cap
+ThaumicExploration:mechanistCapUncharged, Inert Mechanist's Cap
+ThaumicExploration:pureZombieBrain, Cured Zombie Brain
+ThaumicExploration:blankSeal:0, Dark Blank Seal
+ThaumicExploration:blankSeal:1, Red Blank Seal
+ThaumicExploration:blankSeal:2, Green Blank Seal
+ThaumicExploration:blankSeal:3, Brown Blank Seal
+ThaumicExploration:blankSeal:4, Blue Blank Seal
+ThaumicExploration:blankSeal:5, Purple Blank Seal
+ThaumicExploration:blankSeal:6, Cyan Blank Seal
+ThaumicExploration:blankSeal:7, Light Gray Blank Seal
+ThaumicExploration:blankSeal:8, Gray Blank Seal
+ThaumicExploration:blankSeal:9, Pink Blank Seal
+ThaumicExploration:blankSeal:10, Lime Blank Seal
+ThaumicExploration:blankSeal:11, Yellow Blank Seal
+ThaumicExploration:blankSeal:12, Light Blue Blank Seal
+ThaumicExploration:blankSeal:13, Magenta Blank Seal
+ThaumicExploration:blankSeal:14, Orange Blank Seal
+ThaumicExploration:blankSeal:15, Pale Blank Seal
+ThaumicExploration:chestSeal:0, Dark Chest Binding Seal
+ThaumicExploration:chestSeal:1, Red Chest Binding Seal
+ThaumicExploration:chestSeal:2, Green Chest Binding Seal
+ThaumicExploration:chestSeal:3, Brown Chest Binding Seal
+ThaumicExploration:chestSeal:4, Blue Chest Binding Seal
+ThaumicExploration:chestSeal:5, Purple Chest Binding Seal
+ThaumicExploration:chestSeal:6, Cyan Chest Binding Seal
+ThaumicExploration:chestSeal:7, Light Gray Chest Binding Seal
+ThaumicExploration:chestSeal:8, Gray Chest Binding Seal
+ThaumicExploration:chestSeal:9, Pink Chest Binding Seal
+ThaumicExploration:chestSeal:10, Lime Chest Binding Seal
+ThaumicExploration:chestSeal:11, Yellow Chest Binding Seal
+ThaumicExploration:chestSeal:12, Light Blue Chest Binding Seal
+ThaumicExploration:chestSeal:13, Magenta Chest Binding Seal
+ThaumicExploration:chestSeal:14, Orange Chest Binding Seal
+ThaumicExploration:chestSeal:15, Pale Chest Binding Seal
+ThaumicExploration:chestSealLinked:0, Dark Chest Binding Seal
+ThaumicExploration:chestSealLinked:1, Red Chest Binding Seal
+ThaumicExploration:chestSealLinked:2, Green Chest Binding Seal
+ThaumicExploration:chestSealLinked:3, Brown Chest Binding Seal
+ThaumicExploration:chestSealLinked:4, Blue Chest Binding Seal
+ThaumicExploration:chestSealLinked:5, Purple Chest Binding Seal
+ThaumicExploration:chestSealLinked:6, Cyan Chest Binding Seal
+ThaumicExploration:chestSealLinked:7, Light Gray Chest Binding Seal
+ThaumicExploration:chestSealLinked:8, Gray Chest Binding Seal
+ThaumicExploration:chestSealLinked:9, Pink Chest Binding Seal
+ThaumicExploration:chestSealLinked:10, Lime Chest Binding Seal
+ThaumicExploration:chestSealLinked:11, Yellow Chest Binding Seal
+ThaumicExploration:chestSealLinked:12, Light Blue Chest Binding Seal
+ThaumicExploration:chestSealLinked:13, Magenta Chest Binding Seal
+ThaumicExploration:chestSealLinked:14, Orange Chest Binding Seal
+ThaumicExploration:chestSealLinked:15, Pale Chest Binding Seal
+ThaumicExploration:jarSeal:0, Dark Jar Binding Seal
+ThaumicExploration:jarSeal:1, Red Jar Binding Seal
+ThaumicExploration:jarSeal:2, Green Jar Binding Seal
+ThaumicExploration:jarSeal:3, Brown Jar Binding Seal
+ThaumicExploration:jarSeal:4, Blue Jar Binding Seal
+ThaumicExploration:jarSeal:5, Purple Jar Binding Seal
+ThaumicExploration:jarSeal:6, Cyan Jar Binding Seal
+ThaumicExploration:jarSeal:7, Light Gray Jar Binding Seal
+ThaumicExploration:jarSeal:8, Gray Jar Binding Seal
+ThaumicExploration:jarSeal:9, Pink Jar Binding Seal
+ThaumicExploration:jarSeal:10, Lime Jar Binding Seal
+ThaumicExploration:jarSeal:11, Yellow Jar Binding Seal
+ThaumicExploration:jarSeal:12, Light Blue Jar Binding Seal
+ThaumicExploration:jarSeal:13, Magenta Jar Binding Seal
+ThaumicExploration:jarSeal:14, Orange Jar Binding Seal
+ThaumicExploration:jarSeal:15, Pale Jar Binding Seal
+ThaumicExploration:charmNoTaint, Wispy Dreamcatcher
+ThaumicExploration:charmTaint, Tainted Band
+ThaumicExploration:bootsMeteor, Boots of the Meteor
+ThaumicExploration:bootsComet, Boots of the Comet
+ThaumicExploration:taintBerry, Taintberry
+ThaumicExploration:tentacleRing, Taintacle Ring
+ThaumicExploration:stabilizerBelt, Thaumostatic Stabilizer
+ThaumicExploration:discountRing, item.thaumicexploration:discountRing.name
+ThaumicHorizons:spawnerEgg:0, Spawn Chromatic Sheep
+ThaumicHorizons:spawnerEgg:1, Spawn Self-Shearing Sheep
+ThaumicHorizons:spawnerEgg:2, Spawn Guardian Panther
+ThaumicHorizons:spawnerEgg:3, Spawn Gravekeeper
+ThaumicHorizons:spawnerEgg:4, Spawn Familiar
+ThaumicHorizons:spawnerEgg:5, Spawn Chocolate Cow
+ThaumicHorizons:spawnerEgg:6, Spawn Scholar's Chicken
+ThaumicHorizons:spawnerEgg:7, Spawn Golden Chicken
+ThaumicHorizons:spawnerEgg:8, Spawn Ore Boar
+ThaumicHorizons:spawnerEgg:9, Spawn Taintfeeder
+ThaumicHorizons:spawnerEgg:10, Spawn Endersteed
+ThaumicHorizons:spawnerEgg:11, Spawn Seawolf
+ThaumicHorizons:spawnerEgg:12, Spawn Nether Hound
+ThaumicHorizons:spawnerEgg:13, Spawn Lunar Wolf
+ThaumicHorizons:spawnerEgg:14, Spawn Zombie Horse
+ThaumicHorizons:spawnerEgg:15, Spawn Skeletal Horse
+ThaumicHorizons:spawnerEgg:16, Spawn Nightmare
+ThaumicHorizons:spawnerEgg:17, Spawn Meat Slime
+ThaumicHorizons:spawnerEgg:18, Spawn Mercurial Slime
+ThaumicHorizons:spawnerEgg:19, Spawn Volt Slime
+ThaumicHorizons:spawnerEgg:20, Spawn Medslime
+ThaumicHorizons:spawnerEgg:21, Spawn Sheeder
+ThaumicHorizons:spawnerEgg:22, Spawn Lost Soul
+ThaumicHorizons:eggIncubated, item.null.name
+ThaumicHorizons:lensFire, item.null.name
+ThaumicHorizons:lensWater, item.null.name
+ThaumicHorizons:lensAir, item.null.name
+ThaumicHorizons:lensEarth, item.null.name
+ThaumicHorizons:lensOrderEntropy, item.null.name
+ThaumicHorizons:lensCase, item.null.name
+ThaumicHorizons:focusContainment, item.null.name
+ThaumicHorizons:focusLiquefaction, item.null.name
+ThaumicHorizons:focusDisintegration, item.null.name
+ThaumicHorizons:focusIllumination:0, Wand Focus: Illumination (Black)
+ThaumicHorizons:focusIllumination:1, Wand Focus: Illumination (Red)
+ThaumicHorizons:focusIllumination:2, Wand Focus: Illumination (Green)
+ThaumicHorizons:focusIllumination:3, Wand Focus: Illumination (Brown)
+ThaumicHorizons:focusIllumination:4, Wand Focus: Illumination (Blue)
+ThaumicHorizons:focusIllumination:5, Wand Focus: Illumination (Purple)
+ThaumicHorizons:focusIllumination:6, Wand Focus: Illumination (Cyan)
+ThaumicHorizons:focusIllumination:7, Wand Focus: Illumination (Silver)
+ThaumicHorizons:focusIllumination:8, Wand Focus: Illumination (Gray)
+ThaumicHorizons:focusIllumination:9, Wand Focus: Illumination (Pink)
+ThaumicHorizons:focusIllumination:10, Wand Focus: Illumination (Lime)
+ThaumicHorizons:focusIllumination:11, Wand Focus: Illumination (Yellow)
+ThaumicHorizons:focusIllumination:12, Wand Focus: Illumination (Light Blue)
+ThaumicHorizons:focusIllumination:13, Wand Focus: Illumination (Magenta)
+ThaumicHorizons:focusIllumination:14, Wand Focus: Illumination (Orange)
+ThaumicHorizons:focusIllumination:15, Wand Focus: Illumination (White)
+ThaumicHorizons:focusAnimation, item.null.name
+ThaumicHorizons:amuletMirror:0, Mirrored Amulet
+ThaumicHorizons:syringeEmpty, item.null.name
+ThaumicHorizons:syringeBlood:0, Blood Syringe
+ThaumicHorizons:syringeBlood:1, Blast Phial
+ThaumicHorizons:syringeBloodSample, item.null.name
+ThaumicHorizons:injector, item.null.name
+ThaumicHorizons:corpseEffigy, item.null.name
+ThaumicHorizons:nutrients, item.null.name
+ThaumicHorizons:dummy, item.null.name
+ThaumicHorizons:barChocolate, item.null.name
+ThaumicHorizons:bucketChocolate, item.null.name
+ThaumicHorizons:iceCream, item.null.name
+ThaumicHorizons:inkEgg, item.null.name
+ThaumicHorizons:goldEgg, item.null.name
+ThaumicHorizons:infusionCheat, item.null.name
+ThaumicHorizons:infusionSelfCheat, item.null.name
+ThaumicHorizons:suicidePill, item.null.name
+ThaumicHorizons:golemPowder, item.null.name
+ThaumicHorizons:golemPlacer:0, Animated Golem
+ThaumicHorizons:golemPlacer:1, Animated Golem
+ThaumicHorizons:golemPlacer:2, Animated Golem
+ThaumicHorizons:golemPlacer:3, Animated Golem
+ThaumicHorizons:golemPlacer:4, Animated Golem
+ThaumicHorizons:golemPlacer:5, Animated Golem
+ThaumicHorizons:golemPlacer:6, Animated Golem
+ThaumicHorizons:golemPlacer:7, Animated Golem
+ThaumicHorizons:Golemancy Bell TH, item.null.name
+ThaumicHorizons:boatGreatwood, item.null.name
+ThaumicHorizons:boatThaumium, item.null.name
+ThaumicHorizons:dummyVat, item.null.name
+ThaumicHorizons:keystoneTH, item.null.name
+ThaumicHorizons:planarConduit, item.null.name
+ThaumicHorizons:wandCastingDisposable:0, Disposable Crystalline Wand
+ThaumicHorizons:crystalWand, item.null.name
+ThaumicHorizons:voidPutty, item.null.name
+ThaumicHorizons:meatTH, item.null.name
+ThaumicHorizons:meatCookedTH, item.null.name
+ThaumicHorizons:meatNuggetTH, item.null.name
+ThaumicHorizons:nodeCheat, Node Opener
 ThermalDynamics:servo:0, Servo
 ThermalDynamics:servo:1, Hardened Servo
 ThermalDynamics:servo:2, Reinforced Servo
@@ -22209,6 +22510,12 @@ ThermalDynamics:cover:0, Sandy Dirt Cover
 ThermalDynamics:cover:0, Coarse Sandy Dirt Cover
 ThermalDynamics:cover:0, Silty Dirt Cover
 ThermalDynamics:cover:0, Coarse Silty Dirt Cover
+ThermalDynamics:cover:0, Loamy Farmland Cover
+ThermalDynamics:cover:0, Loamy Farmland Cover
+ThermalDynamics:cover:0, Sandy Farmland Cover
+ThermalDynamics:cover:0, Loamy Farmland Cover
+ThermalDynamics:cover:0, Loamy Farmland Cover
+ThermalDynamics:cover:0, Loamy Farmland Cover
 ThermalDynamics:cover:0, Sacred Oak Wood Cover
 ThermalDynamics:cover:0, Cherry Wood Cover
 ThermalDynamics:cover:0, Dark Wood Cover
@@ -26112,25 +26419,25 @@ ThermalDynamics:cover:0, Molten Constantan Cover
 ThermalDynamics:cover:0, Fairy Block Cover
 ThermalDynamics:cover:0, Pokefennium Block Cover
 ThermalDynamics:cover:0, RedAurum Block Cover
-ThermalDynamics:cover:0, tile.gaseousShadow.name Cover
+ThermalDynamics:cover:0, Smokey Quartz Slab Cover
+ThermalDynamics:cover:0, Smokey Quartz Slab Cover
+ThermalDynamics:cover:0, Aer Imbued Fire Cover
+ThermalDynamics:cover:0, Bedrock Portal Cover
+ThermalDynamics:cover:0, tile.nitorGas.name Cover
+ThermalDynamics:cover:0, Terra Imbued Fire Cover
 ThermalDynamics:cover:0, Block of Smokey Quartz Cover
 ThermalDynamics:cover:0, Chiseled Smokey Quartz Block Cover
 ThermalDynamics:cover:0, Pillar Smokey Quartz Block Cover
 ThermalDynamics:cover:0, Paving Stair of Travel Cover
-ThermalDynamics:cover:0, Bedrock Portal Cover
-ThermalDynamics:cover:0, Aqua Imbued Fire Cover
-ThermalDynamics:cover:0, tile.gaseousLight.name Cover
-ThermalDynamics:cover:0, Paving Slab of Travel Cover
-ThermalDynamics:cover:0, Paving Slab of Travel Cover
-ThermalDynamics:cover:0, Ignis Imbued Fire Cover
-ThermalDynamics:cover:0, Perditio Imbued Fire Cover
-ThermalDynamics:cover:0, tile.nitorGas.name Cover
 ThermalDynamics:cover:0, Smokey Quartz Stairs Cover
+ThermalDynamics:cover:0, tile.gaseousLight.name Cover
+ThermalDynamics:cover:0, Ignis Imbued Fire Cover
+ThermalDynamics:cover:0, Aqua Imbued Fire Cover
+ThermalDynamics:cover:0, Perditio Imbued Fire Cover
+ThermalDynamics:cover:0, Paving Slab of Travel Cover
+ThermalDynamics:cover:0, Paving Slab of Travel Cover
+ThermalDynamics:cover:0, tile.gaseousShadow.name Cover
 ThermalDynamics:cover:0, Ordo Imbued Fire Cover
-ThermalDynamics:cover:0, Terra Imbued Fire Cover
-ThermalDynamics:cover:0, Aer Imbued Fire Cover
-ThermalDynamics:cover:0, Smokey Quartz Slab Cover
-ThermalDynamics:cover:0, Smokey Quartz Slab Cover
 ThermalDynamics:cover:0, Thaumic Cake Cover
 ThermalDynamics:cover:0, Umbral Rose Cover
 ThermalDynamics:cover:0, Nether Star Block Cover
@@ -26393,16 +26700,21 @@ ThermalDynamics:cover:0, Rope Cover
 ThermalDynamics:cover:0, Salt Block Cover
 ThermalDynamics:cover:0, Fence with Rope (Nether Brick) Cover
 ThermalDynamics:cover:0, Salt Water Cover
-ThermalDynamics:cover:0, Apple Sapling Cover
-ThermalDynamics:cover:0, Apple Leaves Cover
-ThermalDynamics:cover:0, Apple Cover
-ThermalDynamics:cover:0, Apple Juice Cover
-ThermalDynamics:cover:0, Apple Cider Cover
-ThermalDynamics:cover:0, Apple Cider Cover
-ThermalDynamics:cover:0, Apple Cider Cover
-ThermalDynamics:cover:0, Silken Nectar Cover
-ThermalDynamics:cover:0, Apple Cider Cover
-ThermalDynamics:cover:0, Apple Cider Cover
+ThermalDynamics:cover:0, Thistle Cover
+ThermalDynamics:cover:0, Milk Cover
+ThermalDynamics:cover:0, Butter Milk Cover
+ThermalDynamics:cover:0, Cream Cover
+ThermalDynamics:cover:0, Milk Curds Cover
+ThermalDynamics:cover:0, Rennet Cover
+ThermalDynamics:cover:0, Skim Milk Cover
+ThermalDynamics:cover:0, Whey Cover
+ThermalDynamics:cover:0, Pasteurized Milk Cover
+ThermalDynamics:cover:0, Kumis Cover
+ThermalDynamics:cover:0, Kumis Cover
+ThermalDynamics:cover:0, Kumis Cover
+ThermalDynamics:cover:0, Kumis Cover
+ThermalDynamics:cover:0, Kumis Cover
+ThermalDynamics:cover:0, Vile Milk Cover
 ThermalDynamics:cover:0, Bamboo Cover
 ThermalDynamics:cover:0, Bamboo Shoot Cover
 ThermalDynamics:cover:0, Bamboo Cover
@@ -26415,15 +26727,16 @@ ThermalDynamics:cover:0, Bamboo Slab Cover
 ThermalDynamics:cover:0, Bamboo Door Cover
 ThermalDynamics:cover:0, Bamboo Fence Gate Cover
 ThermalDynamics:cover:0, Bamboo Scaffold Cover
-ThermalDynamics:cover:0, Bee Hive Cover
-ThermalDynamics:cover:0, Mead Must Cover
-ThermalDynamics:cover:0, Mead Cover
-ThermalDynamics:cover:0, Mead Cover
-ThermalDynamics:cover:0, Mead Cover
-ThermalDynamics:cover:0, Mead Cover
-ThermalDynamics:cover:0, Mead Cover
-ThermalDynamics:cover:0, Mead Cover
-ThermalDynamics:cover:0, Honey Cover
+ThermalDynamics:cover:0, Apple Sapling Cover
+ThermalDynamics:cover:0, Apple Leaves Cover
+ThermalDynamics:cover:0, Apple Cover
+ThermalDynamics:cover:0, Apple Juice Cover
+ThermalDynamics:cover:0, Apple Cider Cover
+ThermalDynamics:cover:0, Apple Cider Cover
+ThermalDynamics:cover:0, Apple Cider Cover
+ThermalDynamics:cover:0, Silken Nectar Cover
+ThermalDynamics:cover:0, Apple Cider Cover
+ThermalDynamics:cover:0, Apple Cider Cover
 ThermalDynamics:cover:0, Grape Trunk Cover
 ThermalDynamics:cover:0, Grape Trunk Cover
 ThermalDynamics:cover:0, Grape Leaves Cover
@@ -26453,21 +26766,6 @@ ThermalDynamics:cover:0, Lager Cover
 ThermalDynamics:cover:0, Lager Cover
 ThermalDynamics:cover:0, Lager Cover
 ThermalDynamics:cover:0, Lager Cover
-ThermalDynamics:cover:0, Thistle Cover
-ThermalDynamics:cover:0, Milk Cover
-ThermalDynamics:cover:0, Butter Milk Cover
-ThermalDynamics:cover:0, Cream Cover
-ThermalDynamics:cover:0, Milk Curds Cover
-ThermalDynamics:cover:0, Rennet Cover
-ThermalDynamics:cover:0, Skim Milk Cover
-ThermalDynamics:cover:0, Whey Cover
-ThermalDynamics:cover:0, Pasteurized Milk Cover
-ThermalDynamics:cover:0, Kumis Cover
-ThermalDynamics:cover:0, Kumis Cover
-ThermalDynamics:cover:0, Kumis Cover
-ThermalDynamics:cover:0, Kumis Cover
-ThermalDynamics:cover:0, Kumis Cover
-ThermalDynamics:cover:0, Vile Milk Cover
 ThermalDynamics:cover:0, Rice Cover
 ThermalDynamics:cover:0, Rice Paddy Cover
 ThermalDynamics:cover:0, Sake Moromi Cover
@@ -26477,6 +26775,15 @@ ThermalDynamics:cover:0, Sake Cover
 ThermalDynamics:cover:0, Divine Sake Cover
 ThermalDynamics:cover:0, Sake Cover
 ThermalDynamics:cover:0, Sake Cover
+ThermalDynamics:cover:0, Bee Hive Cover
+ThermalDynamics:cover:0, Mead Must Cover
+ThermalDynamics:cover:0, Mead Cover
+ThermalDynamics:cover:0, Mead Cover
+ThermalDynamics:cover:0, Mead Cover
+ThermalDynamics:cover:0, Mead Cover
+ThermalDynamics:cover:0, Mead Cover
+ThermalDynamics:cover:0, Mead Cover
+ThermalDynamics:cover:0, Honey Cover
 ThermalDynamics:cover:0, tile.headcrumbs.empty.name Cover
 ThermalDynamics:cover:0, Extendable Wooden Post Cover
 ThermalDynamics:cover:0, Steel Trapdoor Cover
@@ -26625,6 +26932,36 @@ ThermalDynamics:cover:0, Advanced Detector Rail Cover
 ThermalDynamics:cover:0, Reinforced Metal Block Cover
 ThermalDynamics:cover:0, Galgadorian Block Cover
 ThermalDynamics:cover:0, Enhanced Galgadorian Block Cover
+ThermalDynamics:cover:0, Ice Cover
+ThermalDynamics:cover:0, Alchemite Cover
+ThermalDynamics:cover:0, Block of Chocolate Cover
+ThermalDynamics:cover:0, tile.ThaumicHorizons_evanescent.name Cover
+ThermalDynamics:cover:0, Planar Boundary Cover
+ThermalDynamics:cover:0, Lump of Brain Cover
+ThermalDynamics:cover:0, Dust Cover
+ThermalDynamics:cover:0, Eye Cluster Cover
+ThermalDynamics:cover:0, Bone Cover
+ThermalDynamics:cover:0, Lump of Flesh Cover
+ThermalDynamics:cover:0, White Crystal Cover
+ThermalDynamics:cover:0, Orange Crystal Cover
+ThermalDynamics:cover:0, Magenta Crystal Cover
+ThermalDynamics:cover:0, Light Blue Crystal Cover
+ThermalDynamics:cover:0, Yellow Crystal Cover
+ThermalDynamics:cover:0, Lime Crystal Cover
+ThermalDynamics:cover:0, Pink Crystal Cover
+ThermalDynamics:cover:0, Gray Crystal Cover
+ThermalDynamics:cover:0, Light Gray Crystal Cover
+ThermalDynamics:cover:0, Cyan Crystal Cover
+ThermalDynamics:cover:0, Purple Crystal Cover
+ThermalDynamics:cover:0, Blue Crystal Cover
+ThermalDynamics:cover:0, Brown Crystal Cover
+ThermalDynamics:cover:0, Green Crystal Cover
+ThermalDynamics:cover:0, Red Crystal Cover
+ThermalDynamics:cover:0, Black Crystal Cover
+ThermalDynamics:cover:0, Deep Crystal Cover
+ThermalDynamics:cover:0, Primordial Fossil Cover
+ThermalDynamics:cover:0, Unnamed Block, report to mod author. Cover
+ThermalDynamics:cover:0, Planar Gateway Cover
 ThermalDynamics:cover:0, Molten Energetic Alloy Cover
 ThermalDynamics:cover:0, Molten Vibrant Alloy Cover
 ThermalDynamics:cover:0, Molten Conductive Iron Cover
